@@ -90,6 +90,11 @@ body {
     gap: 80px;
 }
 
+.reverseInputs {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 input {
     font-size: 16px;
     font-weight: 500;
@@ -126,6 +131,26 @@ input:focus:valid {
 input:placeholder-shown {
     background-color: transparent;
     border: 1px solid #E5E7EB;
+}
+
+input[id="password"]:focus + label::after {
+    content: " (Example: Dog123!)";
+    font-size: small;
+    font-weight: lighter;
+}
+
+input[type="email"]:invalid:focus + label::after {
+    content: " Please provide a valid email *";
+    font-size: small;
+    font-weight: lighter;
+    color: #b92326;
+}
+
+input[type="tel"]:invalid:focus + label::after {
+    content: " Please provide a valid number *";
+    font-size: small;
+    font-weight: lighter;
+    color: #b92326;
 }
 
 input::placeholder {

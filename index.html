@@ -37,24 +37,24 @@
                 </section>
 
                 <section class="formRows">
-                    <div>
-                        <label for="email">EMAIL</label>
+                    <div class="reverseInputs">
                         <input type="email" id="email" name="email" placeholder="juan.delacruz@example.com *" required>
+                        <label for="email">EMAIL</label>
                     </div>
-                    <div>
+                    <div class="reverseInputs">
+                        <input type="tel" id="number" name="phone" pattern="(09|\+639)[0-9]{9}" placeholder="09171234567 / +639171234567 *" required>
                         <label for="number">PHONE NUMBER</label>
-                        <input type="tel" id="number" name="phone" pattern="(09|\+639)\d{9}" placeholder="09171234567 / +639171234567 *" required>
                     </div>
                 </section>
 
                 <section class="formRows">
-                    <div>
+                    <div class="reverseInputs">
+                        <input type="password" id="password" name="password" placeholder="Create a password *" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).+$" required>
                         <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password" placeholder="Create a password *" required>
                     </div>
-                    <div>
+                    <div class="reverseInputs">
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password *" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).+$" required>
                         <label for="confirmPassword">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password *" required>
                     </div>
                 </section>
             </form>
