@@ -99,17 +99,49 @@ input {
     border-radius: 4px;
     font-family: 'Poppins', system-ui;
     width: 257px;
+    outline: none;
 }
 
-input:focus {
-    border: 1px solid blue;
-    outline: none;
-    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+input:invalid {
+    border: 1px solid #b92326;
+    background-color: rgba(185, 35, 38, 0.25);
 }
 
-input[type="password"]:invalid {
-    border: 1px solid red;
-    outline: none;
+input:focus:invalid {
+    background-color: transparent;
+    border: 1px solid #b92326;
+}
+
+input:valid {
+    border: 1px solid #8BC34A;
+    background-color: rgba(139, 195, 74, 0.25);
+}
+
+input:focus:valid {
+    border-color: #fbdc00;
+    box-shadow: 0 0 0 2px rgba(251, 220, 0, 0.5); 
+    background-color: transparent;
+}
+
+input:placeholder-shown {
+    background-color: transparent;
+    border: 1px solid #E5E7EB;
+}
+
+input::placeholder {
+    font-weight: normal;
+}
+
+input::-webkit-input-placeholder {
+    font-weight: normal;
+}
+
+input:-ms-input-placeholder {
+    font-weight: normal;
+}
+
+input::-moz-placeholder {
+    font-weight: normal;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
